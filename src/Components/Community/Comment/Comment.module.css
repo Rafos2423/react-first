@@ -11,11 +11,20 @@
     text-overflow: ellipsis;
 }
 
-h4 {
+.commentAuthor {
     margin: 0px 8px
 }
 
-p {
+.commentText {
     margin: 0px;
     padding-bottom: 15px;
+}
+
+.headerSection {
+    display: flex;
+    padding: 15px 0px;
+}
+
+.buttonContainer:hover {
+    cursor: pointer;
 }
