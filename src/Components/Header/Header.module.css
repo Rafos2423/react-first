@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background-color: var(--background-color);
+    padding: 0px 30px;
+}
+
+.section {
+    display: flex;
+    justify-content: space-between;
+    width: 60px;
+}
+
+.label {
+    padding-left: 3px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.item {
+    margin: 0px 0px;
+    padding: 9px 0px;
+    margin: 0px 10px;
+    font-size: 20px;
+    display: flex;
+    align-items: end;
+    font-weight: 500;
+    border-bottom: 3px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.item:hover {
+    cursor: pointer;
+}
+
+.selected {
+    border-bottom: 3px solid var(--react-color);
+    animation: 0.2s ease-in running;
+}
