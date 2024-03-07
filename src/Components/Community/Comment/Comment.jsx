@@ -9,13 +9,13 @@ export default function Comment(props) {
         <>
             <div className={classes.item}>
                 <div style={{display: "flex", justifyContent: "space-between"}}>
-                    <section class={classes.headerSection}>
+                    <section className={classes.headerSection}>
                         <FontAwesomeIcon icon={faUser}/>
                         <h4 className={classes.commentAuthor}>{props.title}</h4>
                     </section>
-                    <section class={classes.headerSection} style={{width: 30, justifyContent: "space-between"}}>
-                        <div class={classes.buttonContainer}>
-                            <FontAwesomeIcon icon={faHeart} onClick={() => setLiked(true)}/>
+                    <section className={classes.headerSection} style={{width: 30, justifyContent: "space-between"}}>
+                        <div className={classes.buttonContainer}>
+                            <FontAwesomeIcon icon={faHeart} onClick={() => setLiked(!liked)}/>
                         </div>
                         <a>{liked || props.liked ? '1' : ''}</a>
                     </section>

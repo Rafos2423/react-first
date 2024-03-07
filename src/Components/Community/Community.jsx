@@ -4,7 +4,7 @@ import Comment from './Comment/Comment';
 import Pagination from './Pagination/Pagination';
 
 export default function Community() {
-    const [commnets, setComments] = useState([])
+    const [commnets, setComments] = useState(Array.from({ length: 60 }, (_, index) => index))
     const [activePage, setActivePage] = useState(1)
 
     const input = useRef()
@@ -17,16 +17,17 @@ export default function Community() {
             event.preventDefault();
         }
     }
+
     return (
         <>
             <div style={{display: "flex", justifyContent: "center"}}>
                 <div style={{display: "block"}}>
                     <textarea ref={input} className={classes.input} rows="3" placeholder="Добавить комментарий:" onKeyDown={(e) => onKeyDown(e)}/>
-                    <Comment key={-1} title={"Admin"} text={"Здесь вы можете задать вопрос по фреймворку или оставить отзыв"} liked={true}/>
-                    {commnets.map((text, i) => (
+                    {commnets.slice((activePage - 1)*10, activePage*10).map((text, i) => (
                         <Comment key={i} title={"User"} text={text}/>
                     ))}
-                    <Pagination/>
+                    {/* <Comment key={-1} title={"Admin"} text={"Здесь вы можете задать вопрос по фреймворку или оставить отзыв"} liked={true}/> */}
+                    <Pagination elementsCount={commnets.length} active={activePage} scrollPage={setActivePage}/>
                 </div>
             </div>
         </>

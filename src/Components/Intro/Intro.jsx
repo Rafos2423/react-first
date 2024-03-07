@@ -7,7 +7,7 @@ export default function Intro() {
     const [color, setColor] = useState(0);
 
     function changeColor() {
-      setColor(color < contentColors.length ? color + 1 : 0);
+      setColor(color + 1);
     }
   
     function shuffleIndexes() {
@@ -31,7 +31,7 @@ export default function Intro() {
         <>
           {content.map((x, i) => <Content key={i} backgroundColor={contentColors[colorIndexes[i]]} titleColor={titleColors[colorIndexes[i]]} {...x}/>)}
           <div style={{display: "flex", justifyContent: "center", paddingTop: 10}}>
-              <Button onClick={() => changeColor()} text={"Изменить цвет"}/>
+              <Button onClick={() => changeColor()} text={"Запустить интерактивность"}/>
           </div>
         </>
       );

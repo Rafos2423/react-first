@@ -17,6 +17,7 @@
     padding-left: 3px;
     font-weight: 500;
     font-size: 20px;
+    user-select: none;
 }
 
 .item {
@@ -29,6 +30,7 @@
     font-weight: 500;
     border-bottom: 3px solid transparent;
     transition: border-bottom 0.5s;
+    user-select: none;
 }
 
 .item:hover {

@@ -1,11 +1,16 @@
 .pageItem {
     list-style-type: none;
-    padding: 8px 16px;
+    padding: 7px 14px;
     background-color: var(--background-color);
     border-bottom: 1px solid grey;
     border-top: 1px solid grey;
     border-left: 1px solid grey;
     cursor: pointer;
+    user-select: none;
+}
+
+.active {
+    color: var(--react-color)
 }
 
 .pageItem:first-of-type {
